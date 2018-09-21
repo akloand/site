@@ -76,7 +76,7 @@ function drawChart(info){
                     year: '%e %b'
                 },
                 title: {
-                    text: 'Date'
+                    enabled: false
                 }
             },
             labels: {
@@ -102,7 +102,7 @@ function drawChart(info){
             },
             yAxis: [{
                 labels: {
-                    enabled: false
+                    enabled: true
                 },
                 title: {
                     enabled: false
