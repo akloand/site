@@ -13,6 +13,7 @@
         <title>Easy Invest - Будущее инвестиций</title>
         <link rel="icon" type='image/png' href="https://www.primeinvestments.co.za/images/investmentPlanIcon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="s/info.js"></script>
         <script>
             window.plp = {
                 "page_id": 0,
@@ -46,7 +47,13 @@
                     x.open('PUT', '/', 1),
                     x.send(window.lptag + '\n' + document.referrer + '\n' + (location.pathname + location.search))
                 } catch (a) {}
-            }, 1e3);
+
+                getInfo().then(function(info){
+                	document.getElementById("info_sum").innerHTML = Math.round(info.sum/Math.pow(10, 16))/100;
+                	document.getElementById("info_sum_usd").innerHTML = Math.round(info.sum_usd*100)/100;
+                	document.getElementById("info_num").innerHTML = info.num;
+                });
+            }, 100);
         </script>
         <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/vendors.css"></link>
         <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/plp.css"></link>
@@ -4705,7 +4712,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;">127</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum">127</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4739,7 +4746,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;">28927</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum_usd">28927</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4773,7 +4780,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;">223</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_num">95</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
