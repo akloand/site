@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -14,6 +14,14 @@
         <link rel="icon" type='image/png' href="https://www.primeinvestments.co.za/images/investmentPlanIcon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="s/info.js"></script>
+        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/vendors.css"></link>
+        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/plp.css"></link>
+        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/nodes.css"></link>
+        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/swiper.css"></link>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+
         <script>
             window.plp = {
                 "page_id": 0,
@@ -47,24 +55,8 @@
                     x.open('PUT', '/', 1),
                     x.send(window.lptag + '\n' + document.referrer + '\n' + (location.pathname + location.search))
                 } catch (a) {}
-
-                getInfo().then(function(info){
-                	document.getElementById("info_sum").innerHTML = Math.round(info.sum/Math.pow(10, 16))/100;
-                	document.getElementById("info_sum_usd").innerHTML = Math.round(info.sum_usd*100)/100;
-                	document.getElementById("info_num").innerHTML = info.num;
-
-                	drawChart(info);
-                });
             }, 100);
         </script>
-        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/vendors.css"></link>
-        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/plp.css"></link>
-        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/nodes.css"></link>
-        <link type="text/css" rel="stylesheet" href="//s.filesonload.ru/assets/3.3/swiper.css"></link>
-
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
-
     </head>
     <body class="area ">
         <div class="area font-text-ralewaymedium font-header-ralewaybold">
@@ -76,6 +68,23 @@
             	.highcharts-title {
             		display: none;
             	}
+
+            	#inputInvestments {
+				    border: none;
+				    display: block;
+				    font-family: "Josefin Sans", sans-serif;
+				    font-size: 3rem;
+				    line-height: 8.5rem;
+				    color: #fff;
+				    font-weight: 400;
+				    border-radius: 10px;
+				    padding: 0 1.5rem;
+				    white-space: nowrap;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+				    width: 100%;	
+				    background-color: rgba( 198, 194, 255, 1);
+               	}
 
                 #uid3 {
                     background-color: rgba(86, 173, 210, 0.2);
@@ -4230,6 +4239,89 @@
                 div.area.screen-xs .container {
                     max-width: 767px;
                 }
+
+
+
+
+.lds-spinner {
+  color: official;
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+.lds-spinner div {
+  transform-origin: 32px 32px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 29px;
+  width: 5px;
+  height: 14px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+ 
             </style>
             <script>
                 if (!plp.screenSizes) {
@@ -4722,7 +4814,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum">127</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum">315</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4756,7 +4848,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum_usd">28927</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum_usd">75463</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4790,7 +4882,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_num">95</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_num">160</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4810,12 +4902,71 @@
                                 </div>
                                 			<!-- CHARTS -->		
 			<div class="row">
-				<div class="col-lg-12 ">
-					<div class="line-chart2" style="height:400px;">
-						<div id="chart-container2"></div>
+				<div class="col-lg-12 " style="width: 100%">
+					<div class="line-chart2" style="height:400px; width: 100%">
+						<div id="chart-container2">
+
+<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>						
+						
+						</div>
 					</div>
 				</div>			
 			</div>
+
+
+
+                                <div class="node node47 widget widget-grid">
+                                    <div class="wrapper1">
+                                        <div class="wrapper2">
+                                            <div class="grid valign-middle paddings-20px xs-wrap">
+                                                <div class="gridwrap">
+                                                    <div class="col" style="width: 50%;">
+                                                        <div class="cont">
+                                                            <div class="node node48 widget widget-image">
+                                                                <div class="wrapper1">
+                                                                    <div class="wrapper2">
+                                                                    	<input type="text" id="inputInvestments" oninput="calcInvestment(true)"/><br/>
+                                                                         <p style="text-align: center;">
+                                                                             <span style="font-size: 20px;">ВКЛАД: <big id="calcInvestment">?</big> ETH</span>
+                                                                         </p>
+                                                                    	<small>Введите адрес, с которого вы инвестировали, в формате 0x0123456789abcdef... или сумму, которую вы хотите вложить</small>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col" style="width: 50%;">
+                                                        <div class="cont">
+                                                            <div class="node node50 widget widget-image">
+                                                                <div class="wrapper1">
+                                                                    <div class="wrapper2">
+                                                                         <p style="text-align: center;">
+                                                                             <span style="font-size: 20px;">ДИВИДЕНДЫ СЕЙЧАС ETH</span>
+                                                                         </p>
+                                                                         <p style="text-align: center;">
+                                                                             <span style="font-size: 48px;">
+                                                                                 <span style="font-family: &quot;Blogger Sans&quot;;" id="calcDividendsNow">?</span>
+                                                                             </span>
+                                                                         </p>
+                                                                         <p style="text-align: center;">
+                                                                             <span style="font-size: 20px;">ЧЕРЕЗ МЕСЯЦ ETH</span>
+                                                                         </p>
+                                                                         <p style="text-align: center;">
+                                                                             <span style="font-size: 48px;">
+                                                                                 <span style="font-family: &quot;Blogger Sans&quot;;" id="calcDividendsMonth">?</span>
+                                                                             </span>
+                                                                         </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="node node57 widget widget-button">
                                     <div class="wrapper1">
                                         <div class="wrapper2">
@@ -6005,5 +6156,22 @@
         <script type="text/javascript" src="//s.filesonload.ru/assets/3.3/nodes.js"></script>
         <script type="text/javascript" src="//s.filesonload.ru/assets/3.3/swiper.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
+
+        <script>
+            document.getElementById('inputInvestments').value = localStorage.getItem('address') || 5;
+
+            getInfo().then(function(info){
+            	window.investmentInfo = info;
+
+            	document.getElementById("info_sum").innerHTML = Math.round(info.sum/Math.pow(10, 16))/100;
+            	document.getElementById("info_sum_usd").innerHTML = Math.round(info.sum_usd*100)/100;
+            	document.getElementById("info_num").innerHTML = info.num;
+
+            	drawChart(info);
+
+            	calcInvestment();
+            });
+
+        </script>
     </body>
 </html>

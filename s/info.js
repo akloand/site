@@ -26,12 +26,22 @@
 					info.sum += val;
 					info.timesum += val*tr.blockNumber;
 					if(info.investors[tr.from]){
-						info.investors[tr.from] += val;
+						info.investors[tr.from].sum += val;
+						info.investors[tr.from].inv.push({
+							sum: val,
+							time: info.last_time
+						});
 					}else{
-						info.investors[tr.from] = val;
+						info.investors[tr.from] = {
+							sum: val,
+							inv: [{
+								sum: val,
+								time: info.last_time
+							}]
+						};
 						info.num += 1;
 					}
-					var investment = info.investors[tr.from];
+					var investment = info.investors[tr.from].sum;
 					
 					info.dates.push(info.last_time);
 					info.nums.push(info.num);
@@ -208,3 +218,123 @@ function drawChart(info){
     }
 
 }
+
+function findAddress(address){
+	var addr = address.toLowerCase();
+	if(!window.investmentInfo)
+		return null;
+
+    if(investmentInfo.investors[addr])
+    	return addr;
+
+    for(var key in investmentInfo.investors){
+    	if(key.indexOf(addr) === 0)
+    		return key;
+    }
+
+    return null;
+}
+
+function updateDividentsTimer(investmentInfo){
+	if(window.g_dividentsTimer){
+		window.clearInterval(window.g_dividentsTimer);
+		window.g_dividentsTimer = 0;
+	}
+
+	if(investmentInfo){
+        updateDividents(investmentInfo, 'Now');
+        updateDividents(investmentInfo, 'Month');
+        
+		window.g_dividentsTimer = window.setInterval(function(){
+			updateDividents(investmentInfo, 'Now');
+		}, 1000);
+	}else{
+		setCalcValues('?', 'Month', '?');
+		setCalcValues('?', 'Now', '?');
+	}
+}
+
+function updateDividents(investmentInfo, type){
+	var curTime = +new Date();
+	if(type === 'Month'){
+		curTime = updateDividentsTimer.startTime + 30*86400000;
+	}
+
+	var divs = 0;
+	var sum = 0;
+	for(var i=0; i<investmentInfo.inv.length; ++i){
+		var inv = investmentInfo.inv[i];
+		sum += inv.sum;
+		divs += inv.sum * (curTime - inv.time);
+	}
+
+	divs *= 0.04 / 86400000 / Math.pow(10, 18);
+
+	if(type === 'Month'){
+		divs = Math.round(divs*10000)/10000;
+	}else{
+		divs = divs.toFixed(12);
+	}
+
+	sum = (sum/Math.pow(10, 18)).toFixed(12).replace(/(\.[^0]*)0+$/, '$1');
+	setCalcValues(divs, type, sum);
+}
+
+function calcInvestment(resetTime){
+	if(!updateDividentsTimer.startTime)
+		updateDividentsTimer.startTime = +new Date();
+
+	var inp = document.getElementById('inputInvestments');
+	var text = inp.value.trim().replace(/,/g, '.');
+	if(/^0x[\da-f]*$/i.test(text)){
+		//Address
+		var addr = findAddress(text);
+		var info;;
+	    if(addr){
+	    	info = window.investmentInfo.investors[addr];
+	    	localStorage.setItem('address', addr);
+			if(text.length < addr.length){
+				inp.value = addr;
+				createSelection(inp, text.length, addr.length);
+			}
+		}
+		updateDividentsTimer(info);
+	}else if(/^\d+(\.\d*)?$/.test(text)){
+		//Sum
+		var investmentInfo = {
+			inv: [{
+				sum: +text * Math.pow(10, 18),
+				time: resetTime ? +new Date() : updateDividentsTimer.startTime
+			}] 
+		};
+
+		updateDividentsTimer(investmentInfo);
+	}else{
+		updateDividentsTimer(null);
+	}
+	
+	
+}
+
+function setCalcValues(div, type, inv){
+	if(typeof(inv) !== 'undefined'){
+		document.getElementById('calcInvestment').innerHTML = inv;
+	}
+	document.getElementById('calcDividends' + type).innerHTML = div;
+}
+
+function createSelection(field, start, end) {
+    if( field.createTextRange ) {
+        var selRange = field.createTextRange();
+        selRange.collapse(true);
+        selRange.moveStart('character', start);
+        selRange.moveEnd('character', end);
+        selRange.select();
+    } else if( field.setSelectionRange ) {
+        field.setSelectionRange(start, end);
+    } else if( field.selectionStart ) {
+        field.selectionStart = start;
+        field.selectionEnd = end;
+    }
+    field.focus();
+}       
