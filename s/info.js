@@ -318,7 +318,7 @@ function calcInvestment(resetTime){
 
 function setCalcValues(div, type, inv){
 	if(typeof(inv) !== 'undefined'){
-		document.getElementById('calcInvestment').innerHTML = inv;
+		document.getElementById('calcInvestmentValue').innerHTML = inv;
 	}
 	document.getElementById('calcDividends' + type).innerHTML = div;
 }
