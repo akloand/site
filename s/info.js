@@ -1,38 +1,49 @@
 ﻿function getInfo(){
-	var rate = window.fetch("https://api.coinmarketcap.com/v1/ticker/ethereum/")
+	var rate = fetch("https://api.coinmarketcap.com/v1/ticker/ethereum/")
 		.then(function(response){
 			return response.json();
 		});
 
-	return window.fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=0&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
+	return fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=0&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
 		.then(function(response){
 			return response.json();
 		}).then(function(json){
 			var info = json.result.reduce(function(info, tr){
+				if(+tr.isError)
+					return info;
 				var val = +tr.value;
+				if(!info.firstBlock){
+					info.firstBlock = +tr.blockNumber;
+					info.firstTime = +tr.timeStamp;
+				}
+				info.lastBlock = +tr.blockNumber;
+				info.lastTime = +tr.timeStamp;
+
 				if(val){
 					info.last = val;
 					info.last_time = tr.timeStamp * 1000;
 
 					info.sum += val;
+					info.timesum += val*tr.blockNumber;
 					if(info.investors[tr.from]){
 						info.investors[tr.from] += val;
 					}else{
 						info.investors[tr.from] = val;
 						info.num += 1;
 					}
+					var investment = info.investors[tr.from];
 					
 					info.dates.push(info.last_time);
 					info.nums.push(info.num);
 					info.sums.push(Math.round(info.sum/Math.pow(10,16))/100);
 
-					if(info.min == -1 || info.min > val)
-						info.min = val;
-					if(val > info.max)
-						info.max = val;
+					if(info.min == -1 || info.min > investment)
+						info.min = investment;
+					if(investment > info.max)
+						info.max = investment;
 				}
 				return info;
-			}, {sum: 0, num: 0, investors: {}, dates: [], nums: [], sums: [], min: -1, max: 0});
+			}, {sum: 0, timesum: 0, num: 0, investors: {}, dates: [], nums: [], sums: [], min: -1, max: 0});
 
 			info.avg = info.sum/info.num;
 			
@@ -81,7 +92,7 @@ function drawChart(info){
             },
             labels: {
                 items: [{
-                    html: 'Avg. investment: ' + avg + 'ETH',
+                    html: 'Average ' + avg + 'ETH, max ' + max + ' ETH',
                     style: {
                         left: '50px',
                         top: '18px',
@@ -167,7 +178,7 @@ function drawChart(info){
                 },
                 {
                     type: 'pie',
-                    name: 'AVG',
+                    name: 'Investment',
                     data: [
                         {
                             name: avg + ' AVG',
