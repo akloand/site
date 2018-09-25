@@ -1,8 +1,218 @@
-first: first
-title: "Title"
-errors:
-  username:
-    uniquness: "Username is not unique."
-    valid: "Username is not valid."
-user:
-  title: "ENGLISH USER TITLE"
+meta:
+  description: Easy Invest is a people`s investment fund of a new generation based on an Ethereum smart contract.
+    Thanks to this fund, you will be able to receive 4% of your investment every day for life!
+  keywords: people`s contract, 333eth, easy invest, изи инвест, smart contract, investments, ether, ethereum, 
+    earnings on the internet, passive income, investors, investment fund, income, finance, freebie, 
+    simple earnings, how to earn in internet, smartcontract, cryptocurrency, bounty, bitcoin, money,
+    pandemica, gorgona, easy money, financial  pyramid
+  title: Easy Invest - people`s investment contract!
+
+switch_lang:
+  url: /ru/
+  title: РУС
+
+menu:
+  technology: Technology
+  features: Features
+  instructions: Instructions
+  faq: FAQ
+
+homepage:
+  title: First people`s investment contract
+  mainpoint: <big>4%</big> per day for life!
+  guarantee: Safety of your deposit is guaranteed by the most simple and honest,
+    fully autonomous smart contract created on Ethereum cryptocurrency platform
+
+button:
+  make_investment: Invest
+  see_contract: Look at the contract
+  show_address: Show contract address
+
+smarts:
+  p1: Smart contracts &mdash; innovative technology which enabled 
+    build reliable and trustful relations among people without any third parties.
+  p2: Smart contracts are used in financial area, as well as in medicine, energy and rocket engineering.
+    The main feature of this technology is its openness and transparency 
+    &mdash; smart contracts can not be changed after they are deployed into a blockchain.
+    Therefore, the rules described in them are respected invariably.
+  p3: Easy Invest - the first people`s investment smart contract. Why is it people`s?
+    Find an answer in <a href="#question">FAQ</a>.
+
+stats:
+  title: Current state of fund
+  invested_eth: ETH INVESTED
+  invested_usd: USD INVESTED
+  investors: INVESTORS
+  investment: 'DEPOSIT:'
+  input_hint: Enter the address you contributed from in form 0x0123456789abcdef...
+    or the amount you want to invest
+  dividends_now: DIVIDENDS BY NOW ETH
+  dividends_month: IN A MONTH ETH
+
+distribution:
+  title: Distribution of funds
+  subtitle: The creators are the same investors as You are
+  service: Service comission
+  referal: Referral program
+  ads: Advertisement budget
+  payout: Payouts to investors
+
+instruction:
+  title: How to make a deposit
+  step1:
+    title: Register and replenish ETH wallet
+    p1: For mobile devices we recommend using a wallet  
+      <a href="https://trustwalletapp.com/" target="_blank">Trust Wallet</a>.
+    p2: You can also use one of the most popular online-wallets
+      <a href="https://www.myetherwallet.com/" target="_blank">MyEtherWallet</a>.
+      To store and transfer cryptocurrency on your desktop computer you can use a wallet
+      <a href="https://jaxx.io/downloads.html" target="_blank">Jaxx</a>
+    p3: You can purchase Ethereum cryptocurrency for USD and other currency at 
+      <a href="https://www.bestchange.com">https://www.bestchange.com</a>.
+  step2:
+    title: Invest ETH at 4% per day
+    subtitle: 'Send ETH from your wallet to the smart contract address:'
+    copy: Copy contract address
+    p1: Minimum investment is 0.01 ETH
+    p2: 'Recommended gas limit: <b>70000</b>, actual gas price you can see at
+      <a href="https://ethgasstation.info/">https://ethgasstation.info/</a>'
+    p3: You can not transfer money from exchanges, only from your personal ETH wallet
+    p4: <!--Watch <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0">video</a>-->
+  step3:
+    title: Check and track your transaction
+    subtitle: Check the success of you transaction in your wallet application history 
+      or at the site <a href="https://etherscan.io" target="_blank">etherscan.io</a>,
+      just enter your wallet address there
+  step4:
+    title: Get paid at any convenient time
+    p1: The contract remembers the address of your wallet, as well as the amount 
+      and time of your deposit
+    p2: Every 24 hours 4% of your deposit is added to the payment available to you.
+      The amount of payment is calculated by the formula
+      (number of minutes since the last payment / (24 * 60)) x amount of deposit
+    p3: You can receive a payment at any time by sending 0 ETH to the contract address
+
+faq:
+  title: Frequently asked Questions
+  q1:
+    question: <big>W</big></big>hat are the guarantees that I will receive my interest?
+    answer: The project smart contract is deployed into the Ethereum blockchain. It is fully automated.
+      The contract creator does not have access to the code and data. It is not even clear who the creator is.
+      The contract can not be changed or deleted. Funds that are stored on the contract account are 
+      managed exclusively a simple and reliable program that makes payments. Code of the program
+      guarantees permanent payments. You can see
+      <a href="https://etherscan.io/address/0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f"> the code </a>
+      and verify it or ask community members on <a href="https://t.me/SmartEasyInvestEN">telegram channel</a>.
+  q2:
+    question: <big><big>W</big></big>hy payouts are for life?
+    answer: The smart contract code guarantees payouts as long as the fund has money.
+  q3:
+    question: <big><big>W</big></big>hy choose this project?
+    answer: '<ul>
+                <li><big><b>Simple and honest contract</b></big><br/>
+                This contract has the simplest, the most honest and therefore the most relible source code,
+                   which is available for review by anyone.
+                </li>
+                <li><big><b>No owner</b></big><br/>
+                The contract does not have owner, the contract creators are just ordinary investors. Is this not the best proof of its reliability?
+                </li>
+                <li><big><b>All money to investors!</b></big><br/>
+                This is the only contract without any extra comissions. All the 100% deposits go to payouts. Therefore you will earn more.
+                </li>
+                <li><big><b>Maximum payouts</b></big><br/>
+                Thanks to zero comissions the payouts are 4% of your deposit per day!    
+                </li>
+                <li><big><b>Full autonomy</b></big><br/>
+                You can withdraw you interest at any time by yourself. Just by sending 0 ETH transaction to the smart contract address. Regardless of anything!
+                </li> 
+            </ul>'
+  q4:
+    question: <big><big>W</big></big>hat will happen if project creators stop supporting the project?
+    answer: It is the people`s contract, that is, the creators unable to stop support becase there are no any creators :)
+      And if they were they do not have access to contract anyway - the contract is absolutely automatic. 
+      Therefore the contract will continue working in any circumstances.
+  q5:
+    question: <big><big>I</big></big>s there a referral program?
+    answer: '<p>
+                No, because we believe that referral programs are just waste of investor`s money.
+            </p>
+            <p>
+                Since the contract does work good you receive large interest for your deposit.
+            </p>
+            <p>
+                Involve others to participate in the project without a referral link - and you will receive your interest much longer!
+            </p>'
+  q6:
+    question: <big><big>W</big></big>hy is the contract called people`s?
+    answer: '<p>
+               Initially it was called Easy Invest and had a developer. As once Bitcoin had the developer Satosi Nakamoto. 
+               This developer made a completely autonomous contract, threw a couple of links at the forums and ... gone!
+               Over time, all messages from this developer have disappeared from the forums.
+               It is known that one of the first investments in this contract was the developer`s contribution.
+            </p>
+            <p>
+                And then the contract existed on its own. Possessing the uniqueness, brevity, simplicity and honesty of its code,
+                like Bitcoin, he literally draws people to him. After a short time without advertising, on the word of mouth 
+                the contract demonstrated a significant growth.
+            </p>
+            <p>
+                Since there are no administrative roles in the contract, it is independently formed around it a
+                community of people who liked the quality and honesty of this contract. In comparison to other similar projects,
+                where despotism of admins reigns, investors are encumbered with huge commissions, and complex contracts contain bugs,
+                Easy Invest looks very good. Thanks to its simplicity, quality, honesty and democracy, people have named
+                Easy Invest a truly people`s and revolutionary contract.
+                Repeating the fate of once abandoned Bitcoin, Easy Invest`s people`s contract can also affect the world as much.
+                And now you have a chance to join the community of the people`s revolutionary contract!
+            </p>
+            <p>
+                It remains only to guess who was the original developer of this people`s contract. Who knows, maybe it`s Satoshi
+                Nakamoto returned and gave us another miracle? :)
+            </p>'
+  q7:
+    question: <big><big>W</big></big>ho is developing this project then?
+    answer: '<p>
+                People. All the forums, telegram groups, reviews - everything is made by ordinary investors, the same as you are.
+            </p>
+            <p>
+                The initial site template (do you like our site?) was presented by formerly competing project. It was discontinued short after 
+                and its developers had probably found more profitable to become ordinary investors of the people`s contract.
+            </p>
+            <p>
+                Joining people`s contract you also become the member of a community and gain right to equally participate 
+                in its development and promotion!
+            </p>'
+  q8:
+    question: <big><big>T</big></big>he advertisement budget is 0? Won`t the project die?
+    answer: '<p>
+              No. Quite the opposite, we are afraid it grows up too fast! The fact is that when
+              power and money belongs to the admins, then only a few people work on the project`s support and promotion. There
+              can also work a whole army of referrals (again, for the money of investors), but noone believes them, because it immediately becomes
+              clear that they are just selling their referral link. As a result, people feel faked and do not get involved into projects 
+              that are managed by a group of greedy admins.
+            </p>
+            <p>
+              In the people`s contract, everything is much better. The whole community is united by the 
+              primordial equality and fairness of honest smart contract that does not divide people into admins and investors.
+              As a result, everyone feels responsible for the contract and the project is promoted by everyone!
+            </p>
+            <p>
+              It is not necessary to go too far for the evidence. With advertising costs of 0%, the people`s contract has long had overtaken
+              many "admin-owned" complex projects that waste "on advertising and referrals" up to 30% of the investors money.
+            </p>
+            <p>
+               Therefore, joining the people`s contract, you get a community with the best progress without any
+              commissions from your hard-earned investments. Of course, we must remember that as part of the community, 
+               you too can help other people, informing them that there is such a significant event in the world as a people`s contract.
+               And people will be grateful, and your payments will last much longer.
+            </p>'
+  q9: 
+    question: <big><big>W</big></big>hy does the site says that INVESTED XXX, and the contract has only YYY?
+    answer: Because the site shows the total sum invested without taking into account requested payments. The contract balance is 
+      the sum of deposits minus requested payments. Accordingly, the difference in the amount of investments 
+      from the site and the amount on the contract is equal to the amount of payments already made
+  questions_left: Any questions left?
+  ask_questions: Ask them in our communities:
+
+community:
+  btt: https://bitcointalk.org/index.php?topic=5031592.0
+  telegram: https://t.me/SmartEasyInvestEN
