@@ -1,0 +1,8 @@
+first: first
+title: "Title"
+errors:
+  username:
+    uniquness: "Username is not unique."
+    valid: "Username is not valid."
+user:
+  title: "ENGLISH USER TITLE"
