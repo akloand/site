@@ -19,7 +19,7 @@ menu:
 
 homepage:
   title: First people`s investment contract
-  mainpoint: <big>4%</big> per day for life!
+  mainpoint: <big>4%</big> daily!
   guarantee: Safety of your deposit is guaranteed by the most simple and honest,
     fully autonomous smart contract created on Ethereum cryptocurrency platform
 
@@ -70,7 +70,7 @@ instruction:
     p3: You can purchase Ethereum cryptocurrency for USD and other currency at 
       <a href="https://www.bestchange.com">https://www.bestchange.com</a>.
   step2:
-    title: Invest ETH at 4% per day
+    title: Invest ETH at 4% daily
     subtitle: 'Send ETH from your wallet to the smart contract address:'
     copy: Copy contract address
     p1: Minimum investment is 0.01 ETH
@@ -104,8 +104,9 @@ faq:
       <a href="https://etherscan.io/address/0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f"> the code </a>
       and verify it or ask community members on <a href="https://t.me/SmartEasyInvestEN">telegram channel</a>.
   q2:
-    question: <big><big>W</big></big>hy payouts are for life?
-    answer: The smart contract code guarantees payouts as long as the fund has money.
+    question: <big><big>H</big></big>ow long will I receive payouts?
+    answer: The smart contract code guarantees payouts as long as the fund has money. It may be veeery long time.
+      Remember that all 100% of deposits go to payouts so no single wei (the smallest part of ETH) will be lost.
   q3:
     question: <big><big>W</big></big>hy choose this project?
     answer: '<ul>
@@ -120,7 +121,7 @@ faq:
                 This is the only contract without any extra comissions. All the 100% deposits go to payouts. Therefore you will earn more.
                 </li>
                 <li><big><b>Maximum payouts</b></big><br/>
-                Thanks to zero comissions the payouts are 4% of your deposit per day!    
+                Thanks to zero comissions the payouts are 4% of your deposit daily!    
                 </li>
                 <li><big><b>Full autonomy</b></big><br/>
                 You can withdraw you interest at any time by yourself. Just by sending 0 ETH transaction to the smart contract address. Regardless of anything!
