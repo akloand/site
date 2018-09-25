@@ -273,10 +273,10 @@ function updateDividents(investmentInfo, type){
 	if(type === 'Month'){
 		divs = Math.round(divs*10000)/10000;
 	}else{
-		divs = divs.toFixed(12);
+		divs = divs.toFixed(8);
 	}
 
-	sum = (sum/Math.pow(10, 18)).toFixed(12).replace(/(\.[^0]*)0+$/, '$1');
+	sum = (sum/Math.pow(10, 18)).toFixed(8).replace(/(\.[^0]*)0+$/, '$1');
 	setCalcValues(divs, type, sum);
 }
 
