@@ -18,6 +18,7 @@
   "homepage": "https://github.com/SmartEasyInvest/site#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-include": "^2.3.1",
     "gulp-translator": "^0.2.0"
   }
 }

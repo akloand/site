@@ -1,10 +1,10 @@
-﻿function getInfo(){
+﻿function getInfo(initialInfo){
 	var rate = fetch("https://api.coinmarketcap.com/v1/ticker/ethereum/")
 		.then(function(response){
 			return response.json();
 		});
 
-	return fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=0&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
+	return fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlock || 0) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
 		.then(function(response){
 			return response.json();
 		}).then(function(json){
@@ -18,11 +18,11 @@
 				}
 				info.lastBlock = +tr.blockNumber;
 				info.lastTime = +tr.timeStamp;
-
+			
 				if(val){
 					info.last = val;
 					info.last_time = tr.timeStamp * 1000;
-
+			
 					info.sum += val;
 					info.timesum += val*tr.blockNumber;
 					if(info.investors[tr.from]){
@@ -46,15 +46,15 @@
 					info.dates.push(info.last_time);
 					info.nums.push(info.num);
 					info.sums.push(Math.round(info.sum/Math.pow(10,16))/100);
-
+			
 					if(info.min == -1 || info.min > investment)
 						info.min = investment;
 					if(investment > info.max)
 						info.max = investment;
 				}
 				return info;
-			}, {sum: 0, timesum: 0, num: 0, investors: {}, dates: [], nums: [], sums: [], min: -1, max: 0});
-
+			}, initialInfo);
+			
 			info.avg = info.sum/info.num;
 			
 			return rate.then(function(ratejson){
@@ -62,6 +62,7 @@
 				info.sum_usd = info.sum/Math.pow(10, 18) * info.rate;
 				return info;
 			});
+			
 		});
 }
 

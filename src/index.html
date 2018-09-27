@@ -4803,7 +4803,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum">315</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum">1395</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4837,7 +4837,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum_usd">75463</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_sum_usd">304309</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -4871,7 +4871,7 @@
                                                                             <div class="xs-force-center textable">
                                                                                 <p style="text-align: center;">
                                                                                     <span style="font-size: 48px;">
-                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_num">160</span>
+                                                                                        <span style="font-family: &quot;Blogger Sans&quot;;" id="info_num">420</span>
                                                                                     </span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
@@ -6176,9 +6176,13 @@
         <script src="https://code.highcharts.com/highcharts.js"></script>
 
         <script>
+        	var g_initialInfo =
+//=include base.json
+        </script>
+        <script>
             document.getElementById('inputInvestments').value = localStorage.getItem('address') || 5;
 
-            getInfo().then(function(info){
+            getInfo(window.g_initialInfo).then(function(info){
             	window.investmentInfo = info;
 
             	document.getElementById("info_sum").innerHTML = Math.round(info.sum/Math.pow(10, 16))/100;
