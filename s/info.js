@@ -4,13 +4,19 @@
 			return response.json();
 		});
 
+	if(!initialInfo)
+		initialInfo = {sum: 0, timesum: 0, num: 0, investors: {}, dates: [], nums: [], sums: [], min: -1, max: 0};
+
+	var jsonInternalPromise = fetch("https://api.etherscan.io/api?module=account&action=txlistinternal&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlock || 0) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
+		.then(function(response){
+			return response.json();
+		});
+
 	return fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlock || 0) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
 		.then(function(response){
 			return response.json();
 		}).then(function(json){
 			var info = json.result.reduce(function(info, tr){
-				if(+tr.isError)
-					return info;
 				var val = +tr.value;
 				if(!info.firstBlock){
 					info.firstBlock = +tr.blockNumber;
@@ -18,29 +24,37 @@
 				}
 				info.lastBlock = +tr.blockNumber;
 				info.lastTime = +tr.timeStamp;
-			
+
+				if(info.investors[tr.from]){
+					info.investors[tr.from].gas += tr.gasUsed * tr.gasPrice;
+				}else{
+					info.investors[tr.from] = {
+						sum: 0,
+						inv: [],
+						gas: tr.gasUsed * tr.gasPrice
+					}
+				}
+
+				if(+tr.isError)
+					return info;
+				
 				if(val){
 					info.last = val;
 					info.last_time = tr.timeStamp * 1000;
 			
 					info.sum += val;
 					info.timesum += val*tr.blockNumber;
-					if(info.investors[tr.from]){
-						info.investors[tr.from].sum += val;
-						info.investors[tr.from].inv.push({
-							sum: val,
-							time: info.last_time
-						});
-					}else{
-						info.investors[tr.from] = {
-							sum: val,
-							inv: [{
-								sum: val,
-								time: info.last_time
-							}]
-						};
+
+					var inv = info.investors[tr.from];
+					if(!inv.sum)
 						info.num += 1;
-					}
+
+					inv.sum += val;
+					inv.inv.push({
+						sum: val,
+						time: info.last_time
+					});
+
 					var investment = info.investors[tr.from].sum;
 					
 					info.dates.push(info.last_time);
@@ -54,15 +68,33 @@
 				}
 				return info;
 			}, initialInfo);
-			
+
 			info.avg = info.sum/info.num;
-			
+
 			return rate.then(function(ratejson){
 				info.rate = +ratejson[0].price_usd;
 				info.sum_usd = info.sum/Math.pow(10, 18) * info.rate;
+
+				jsonInternalPromise.then(function(json){
+					info = json.result.reduce(function(info, tr){
+						if(!(+tr.isError)){
+							var inv = info.investors[tr.to];
+							if(inv){
+								inv.got = (inv.got || 0) + (+tr.value);
+								inv.gotTime = tr.timeStamp*1000;
+							}
+						    info.got = (info.got || 0) + (+tr.value);
+						}
+						return info;
+					}, info);
+				}, function(e){
+					console.log('Error fetching internal transactions: ' + e);
+					return info;
+				});
+
 				return info;
 			});
-			
+
 		});
 }
 
@@ -250,35 +282,40 @@ function updateDividentsTimer(investmentInfo){
 			updateDividents(investmentInfo, 'Now');
 		}, 1000);
 	}else{
-		setCalcValues('?', 'Month', '?');
-		setCalcValues('?', 'Now', '?');
+		setCalcValues('?', 'Month', '?', '?', '?');
+		setCalcValues('?', 'Now', '?', '?', '?');
 	}
 }
 
 function updateDividents(investmentInfo, type){
 	var curTime = +new Date();
-	if(type === 'Month'){
-		curTime = updateDividentsTimer.startTime + 30*86400000;
-	}
-
-	var divs = 0;
-	var sum = 0;
-	for(var i=0; i<investmentInfo.inv.length; ++i){
-		var inv = investmentInfo.inv[i];
-		sum += inv.sum;
-		divs += inv.sum * (curTime - inv.time);
-	}
-
-	divs *= 0.04 / 86400000 / Math.pow(10, 18);
-
-	if(type === 'Month'){
-		divs = Math.round(divs*10000)/10000;
+	if(type !== 'Month'){
+		var divs = 0;
+		var sum = 0;
+		for(var i=0; i<investmentInfo.inv.length; ++i){
+			var inv = investmentInfo.inv[i];
+			sum += inv.sum;
+			divs += inv.sum * (curTime - Math.max(inv.time, investmentInfo.gotTime || 0));
+		}
+	    
+		divs *= 0.04 / 86400000;
 	}else{
-		divs = divs.toFixed(8);
+		divs = investmentInfo.sum * 1.2;
 	}
+
+	divs /= Math.pow(10, 18);
+
+	if(type !== 'Month'){
+		divs = divs.toFixed(8);
+	}else{
+		divs = Math.round(divs*10000)/10000;
+	}
+
+	var got = ((investmentInfo.got || 0)/Math.pow(10,18)).toFixed(8);
+	var gas = ((investmentInfo.gas || 0)/Math.pow(10,18)).toFixed(8);
 
 	sum = (sum/Math.pow(10, 18)).toFixed(8).replace(/(\.[^0]*)0+$/, '$1');
-	setCalcValues(divs, type, sum);
+	setCalcValues(divs, type, sum, got, gas);
 }
 
 function calcInvestment(resetTime){
@@ -302,9 +339,11 @@ function calcInvestment(resetTime){
 		updateDividentsTimer(info);
 	}else if(/^\d+(\.\d*)?$/.test(text)){
 		//Sum
+		var sum = +text * Math.pow(10, 18);
 		var investmentInfo = {
+			sum: sum,
 			inv: [{
-				sum: +text * Math.pow(10, 18),
+				sum: sum,
 				time: resetTime ? +new Date() : updateDividentsTimer.startTime
 			}] 
 		};
@@ -317,9 +356,11 @@ function calcInvestment(resetTime){
 	
 }
 
-function setCalcValues(div, type, inv){
+function setCalcValues(div, type, inv, got, gas){
 	if(typeof(inv) !== 'undefined'){
 		document.getElementById('calcInvestmentValue').innerHTML = inv;
+		document.getElementById('calcDividendsOut').innerHTML = got;
+		document.getElementById('calcSpentOnGas').innerHTML = gas;
 	}
 	document.getElementById('calcDividends' + type).innerHTML = div;
 }

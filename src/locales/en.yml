@@ -46,8 +46,10 @@ stats:
   investment: 'DEPOSIT:'
   input_hint: Enter the address you contributed from in form 0x0123456789abcdef...
     or the amount you want to invest
-  dividends_now: DIVIDENDS BY NOW ETH
-  dividends_month: IN A MONTH ETH
+  dividends_now: AVAILABLE PAYOUT ETH
+  dividends_month: INCOME/MONTH ETH
+  dividends_out: PAYED OUT ETH
+  spent_on_gas: SPENT ON GAS ETH
 
 distribution:
   title: Distribution of funds

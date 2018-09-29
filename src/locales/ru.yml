@@ -46,8 +46,10 @@ stats:
   investment: 'ВКЛАД:'
   input_hint: Введите адрес, с которого вы инвестировали, в формате 0x0123456789abcdef...
     или сумму, которую вы хотите вложить
-  dividends_now: ДИВИДЕНДЫ СЕЙЧАС ETH
-  dividends_month: ЧЕРЕЗ МЕСЯЦ ETH
+  dividends_now: ДОСТУПНО ДЛЯ СНЯТИЯ ETH
+  dividends_month: ДОХОД В МЕСЯЦ ETH
+  dividends_out: УЖЕ СНЯТО ETH
+  spent_on_gas: ПОТРАЧЕНО НА ГАЗ ETH
 
 distribution:
   title: Распределение средств
