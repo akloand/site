@@ -289,6 +289,8 @@ function updateDividentsTimer(investmentInfo){
 
 function updateDividents(investmentInfo, type){
 	var curTime = +new Date();
+	curTime += updateDividentsTimer.timeDiff;
+
 	if(type !== 'Month'){
 		var divs = 0;
 		var sum = 0;
@@ -325,9 +327,10 @@ function calcInvestment(resetTime){
 	var inp = document.getElementById('inputInvestments');
 	var text = inp.value.trim().replace(/,/g, '.');
 	if(/^0x[\da-f]*$/i.test(text)){
+		updateDividentsTimer.timeDiff = Math.max(window.investmentInfo.last_time - (+new Date()), 0);
 		//Address
 		var addr = findAddress(text);
-		var info;;
+		var info;
 	    if(addr){
 	    	info = window.investmentInfo.investors[addr];
 	    	localStorage.setItem('address', addr);
@@ -338,6 +341,7 @@ function calcInvestment(resetTime){
 		}
 		updateDividentsTimer(info);
 	}else if(/^\d+(\.\d*)?$/.test(text)){
+		updateDividentsTimer.timeDiff = 0;
 		//Sum
 		var sum = +text * Math.pow(10, 18);
 		var investmentInfo = {
