@@ -384,3 +384,8 @@ function createSelection(field, start, end) {
     }
     field.focus();
 }       
+
+function onChangeLang(lang){
+	localStorage.setItem('lang', lang);
+	return true;
+}

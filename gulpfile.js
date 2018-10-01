@@ -12,7 +12,7 @@ var options = {
 }
 
 gulp.task('translate', function() {
-  var translations = ['ru', 'en'];
+  var translations = ['ru', 'en', 'ro', 'zh'];
  
   translations.forEach(function(translation){
   	options.lang = translation;

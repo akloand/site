@@ -1,0 +1,216 @@
+﻿meta:
+  description: Easy Invest - este un fond popular de investiții al unei noi generații, bazat pe un contract inteligent Ethereum.
+    Datorită acestui fond, vei putea să primești 4% din contribuția ta zilnic pe viață!
+  keywords: contractul popular, 333eth, easy invest, izi invest, smart contract, investiția, eterul, ethereum, 
+    lucru pe Internet, veniturile pasive, investitorii, fondul de investiții, veniturile, finanțele, freebie, 
+    bani simpli, cum să face bani pe internet, contract inteligent, valută cripto, baunti, bitcoin, bani,
+    pandemica, pandemica, gorgona, bani simpli, fond de investiții, piramida financiară
+  title: Easy Invest - contractul popular de investiții!
+
+switch_lang:
+  country_code: ro
+  title: Română
+
+menu:
+  technology: Tehnologie
+  features: Specialitații
+  instructions: Instrucție
+  faq: Întrebările
+
+homepage:
+  title: Primul contract popular de investiții
+  mainpoint: <big>4%</big> zilnic pe viață!
+  guarantee: Garanția investițiilor sigure este asigurată de cele mai simple și mai oneste, complet
+    autonome contract inteligent creat pe platforma al valuta cripto Ethereum
+
+button:
+  make_investment: A contribui
+  see_contract: A uita contractul
+  show_address: A arata adresa
+
+smarts:
+  p1: Contracte inteligente - o tehnologie inovatoare, care a dat o oportunitate 
+    de a construi o relație de încredere între oameni, fără implicarea unei terțe părți.
+  p2: Contracte inteligente utilizate în sectorul financiar, precum și în medicină, energie și rachete. 
+    Specialitatea principală a acestei tehnologii este deschiderea și transparența 
+    &mdash; contractele inteligente nu pot fi modificate după încărcarea în blocceinul.
+    Prin urmare, regulile descrise în ele sunt respectate invariabil.
+  p3: Easy Invest - primul contract inteligent popular de investiții. De ce e popular?
+    Citiți în <a href="#question">întrebări și răspunsuri</a>.
+
+stats:
+  title: Fondul de stat actual
+  invested_eth: ETH INVESTIT
+  invested_usd: USD INVESTIT
+  investors: INVESTITORI
+  investment: 'CONTRIBUȚIA:'
+  input_hint: Introduceți adresa din care ați investit în format 0x0123456789abcdef...
+    sau suma pe care doriți să o investiți
+  dividends_now: ETH DIVIDENTE ACUM
+  dividends_month: ETH PE LUNĂ
+  dividends_out: ETH PAID OUT
+  spent_on_gas: ETH SPENT ON GAS
+
+distribution:
+  title: Distribuirea ETH
+  subtitle: Creatorii sunt aceiași investitori ca și Dumneavoastră.
+  service: Taxa de serviciu
+  referal: Program de recomandare
+  ads: Bugetul publicitar
+  payout: Plăți către investitori
+
+instruction:
+  title: Cum să contribuiți la proiect
+  step1:
+    title: Înregistrează și umple punga ETH
+    p1: Pentru dispozitive mobile, vă recomandăm utilizarea de pungă 
+      <a href="https://trustwalletapp.com/" target="_blank">Trust Wallet</a>.
+    p2: De asemenea, puteți utiliza una dintre cele mai populare portofele-online 
+      <a href="https://www.myetherwallet.com/" target="_blank">MyEtherWallet</a>.
+      Pentru stocarea și transferul valută cripto prin utilizarea aplicație PC
+      pungă <a href="https://jaxx.io/downloads.html" target="_blank">Jaxx</a>
+    p3: Valută cripto Ethereum puteți cumpăra pentru ruble și alte valute 
+      сайте <a href="https://www.bestchange.com/?p=831118">https://www.bestchange.com</a>.
+  step2:
+    title: Investiți ETH sub 4% pe zi
+    subtitle: Trimiteți ETH din portofel la adresa unui contract inteligent:
+    copy: Copiați adresa contractului
+    p1: Cantitatea minimă de investiții 0,01 ETH
+    p2: gas limit recomandat: <b>70000</b>, actual gas price pot lua de la
+      <a href="https://ethgasstation.info/">https://ethgasstation.info/</a>
+    p3: Nu puteți transfera din schimburi, numai din portofelul personal ETH
+    p4: Privire <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0"> video de revizuire</a>
+  step3:
+    title: Verificați și urmăriți tranzacția
+    subtitle: Verificați succesul tranzacției în istoricul aplicației Dvs. sau
+      на сайте <a href="https://etherscan.io" target="_blank">etherscan.io</a>,
+      specificând adresa portofelului Dvs.
+  step4:
+    title: Primiți plăți la orice oră convenabilă
+    p1: Contractul amintește adresa portofelului Dvs., precum și suma și timpul investiții
+    p2: Fiecare 24 de ore la plata disponibilă pentru Dvs. se adaugă 4% din suma investită de Dvs.
+      Suma de plată se calculează conform formulei
+      (numărul de minute de la ultima plată / 24 * 60) x suma depozitului
+    p3: Puteți primi o plată în orice moment, trimițând 0 ETH la adresa contractului
+
+faq:
+  title: Întrebări frecvente
+  q1:
+    question: <big>U</big></big>nde sunt garanțiile că îmi voi primi interesul?
+    answer: Smart-contract proiectului încărcat în bloccein Ethereum. Opera sa este complet automatizată.
+      Creatorul contractului nu are acces la codul și datele. Nici măcar nu știu cine creatorul. 
+      Contractul nu poate fi modificat sau șters. ETH, care sunt stocate în contul contractului poate 
+      dispune numai de un program simplu și fiabil care face plăți. Codul programului 
+      garantează o plată permanentă. Puteți vedea
+      <a href="https://etherscan.io/address/0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f"> codul</a>
+      și consultați-vă sau citiți subiectul nostru pe 
+      <a href="https://bitcointalk.org/index.php?topic=5031592.0" target="_blank">forum</a>
+      sau uitați <a href="https://www.youtube.com/watch?v=2PyvdqchXYA"> auditul contractului</a>.
+  q2:
+    question: <big><big>D</big></big>E CE PLATILE PERMANENT?
+    answer: Codul de contract inteligent garantează plățile atâta timp cât există ETH în fond.
+  q3:
+    question: <big><big>D</big></big>e ce proiectul nostru?
+    answer: '<ul>
+                <li><big><b>Simplu și onest contractul</b></big><br/>
+                Contractul nostru are cel mai simplu, onest și, prin urmare, cel mai fiabil cod sursă, care este disponibil pentru vizionarea tuturor utilizatorilor.
+                </li>
+                <li><big><b>Nici un proprietar</b></big><br/>
+                În contract nu există proprietar, creatorii participă la acesta ca investitori obișnuiți. Nu este faptul că cea mai bună dovadă a fiabilității sale?
+                </li>
+                <li><big><b>Toți banii investitorilor</b></big><br/>
+                Acesta este singurul contract cu o lipsă totală de taxe inutile. 100% din investiția se duce la plata. Deci, veți câștiga mai mult.
+                </li>
+                <li><big><b>Plata maximă</b></big><br/>
+                Din cauza lipsei plății comisioanelor egală cu 4% pe zi!    
+                </li>
+                <li><big><b>Autonomie</b></big><br/>
+                În orice moment, vă puteți lua în mod independent interesul prin trimiterea unei tranzacții zero la adresa contractului. Indiferent de oricine!
+                </li> 
+            </ul>'
+  q4:
+    question: <big><big>C</big></big>E SE INTIMPLA DACA DEZVOLTATORII INTRERUPE SUPPORTUL PROIECLULUI?
+    answer: Acesta este un contract de oameni, care este, dezvoltatorii nu pot opri sprijin, 
+      pentru că nu sunt :) Și dacă ar fi, nu au acces la un contract. 
+      Prin urmare, contractul va continua să funcționeze în orice situație.
+  q5:
+    question: <big><big>A</big></big>re proiectul un program de referire?
+    answer: '<p>
+                Nu, pentru că un program de sesizare - este doar o risipă de bani investitorilor.
+            </p>
+            <p>
+                Deoarece contractul este foarte bun, obțineți un procent bun din investiția Dvs.
+            </p>
+            <p>
+                Implicați alte persoane să participe la programul fără nici un link de trimitere - și vei primi un procent mult mai mult!
+            </p>'
+  q6:
+    question: <big><big>D</big></big>e ce contractul numit popular?
+    answer: '<p>
+                Inițial sa numit Easy Invest și a avut un dezvoltator. 
+                Ca o dată la bitcoin a fost dezvoltatorul Satosi Nakamoto. Acest dezvoltator a făcut un contract complet autonom, 
+                a aruncat câteva linkuri pe forumuri și ... a dispărut! Cu timpul, toate mesajele de la acest dezvoltator au dispărut de pe forumuri. 
+                Este cunoscut faptul că una dintre prima investiție în contract a fost contribuția dezvoltator.
+            <p>
+                Și apoi contractul a existat singur. Cu sale unice, concizie, simplitatea și onestitatea a codului, 
+                precum și Bitcoin, el atrage literalmente oameni. 
+                Într-un timp scurt, fără publicitate, contractul a crescut puternic pe cuvântul de gura.
+            </p>
+            <p>
+                Deoarece nu roluri administrative în contract nu este prevăzut, atunci în jurul propriei sale de a construi
+                o comunitate de oameni care au trebuit să placă calitatea și integritatea contractului. Comparativ cu alte proiecte similare,
+                în cazul în care tirania domnește administratori, investitori căptușită cu comisioane uriașe și contracte complexe conțin erori, Easy Invest
+                arată într-o lumină foarte favorabilă. Datorită simplității sale, de calitate, onestitate și democrație, oamenii numit 
+                Easy Invest contract de foarte popular și revoluționar.
+                Repetarea soarta abandonat dezvoltator Bitcoin, contractul popular Easy Invest poate, de asemenea, afecta foarte mult din lume. 
+                Și acum aveți șansa de a vă alătura comunității contractului revoluționar poporului!
+            </p>
+            <p>
+                Putem doar ghici cine a fost dezvoltatorul original al contractului național. Cine știe, poate că Satoshi
+                Nakamoto sa întors și ne-a dat un alt miracol? :)
+            </p>'
+  q7:
+    question: <big><big>C</big></big>ine dezvoltă apoi acest proiect, dacă este popular?
+    answer: '<p>
+                Oameni. Toate subiectele de pe forumuri, grupuri în telegrame, site-uri, recenzii - toate făcute de investitorii obișnuiți, la fel ca și dumneavoastră.
+            </p>
+            <p>
+                Șablonul original, pentru site (va dori, de asemenea, site-ul nostru?) A dat în general un proiect concurent. El a închis, iar administratorii acesteia pot fi găsite mai profitabil să se alăture pur și simplu contractului popular ca investitori.
+            </p>
+            <p>
+                Alăturându-se contractului popular, deveniți membru al comunității și puteți participa cu toată lumea la îmbunătățirea și avansarea sa!
+            </p>'
+  q8:
+    question: <big><big>B</big></big>ugetul de publicitate 0? Proiectul nu este îndoit?
+    answer: '<p>
+              E îndoielnic. Dimpotrivă, oricât de mult a crescut prea repede! Faptul este că,  atunci când 
+              puterea și banii aparține adminii, doar câțiva oameni lucrează la sprijinirea și promovarea proiectului. Mai mult, desigur,
+              o întreagă armată de trimiteri poate funcționa (din nou, pentru banii investitorilor), dar nimeni nu crede, pentru că imediat devine 
+              clar că ei încearcă doar să-și vândă link-ul de trimitere. Ca rezultat, oamenii se simt falsi și nu merg la proiectele conduse 
+              de un grup de administratori lacomi.
+            </p>
+            <p>
+                În contractul popular nu este așa. Toate comunitate combinate de capital inițial și justiție contract de inteligent onest,
+                care nu împarte oamenii de pe administratorii și investitorilor. Ca rezultat, toată lumea se simte responsabilă pentru contract și
+                proiectul este promovat de toată lumea! Astfel <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0"> de revizuiri calitative</a>, ca și oamenii care cred cu adevărat în subiect nu ordonă pentru bani.
+            </p>
+            <p>
+                Pentru probele nu trebuie să meargă departe. Cu costurile de publicitate de 0%, contractul popular a depășit mult timp 
+                multe dintre proiectele complexe "de administrare" care alimentează "publicitatea și trimiterile" la 30% din banii investitorilor.
+            </p>
+            <p>
+                Prin urmare, aderarea la contractul popular, te comunitatea cu cea mai bună promovare, fără nici
+                un comision de investiții hard. Desigur, trebuie să ne amintim că, ca parte a unei comunități, de asemenea poate ajuta alți oameni,
+                spunându-le ce eveniment semnificativ în lume, ca un contract popular. Și oamenii vor fi bine, iar plățile dvs. vor dura mult mai mult.
+            </p>'
+  q9: 
+    question: <big><big>D</big></big>e ce este scris site-ul INVESTIȚI XXX, iar pe contractul YYY numai?
+    answer: Deoarece ceea ce este afișat pe site-ul, cât de mult este investit în contract, 
+      fără a lua în considerare plățile solicitate. Contractul se bazează pe valoarea investiției minus plățile solicitate. 
+      Prin urmare, diferența dintre valoarea investițiilor de pe site și valoarea contractului este egală cu suma plăților deja efectuate.
+  questions_left: Aveți întrebări?
+  ask_questions: Pune-le în comunitățile noastre:
+
+community:
+  btt: https://bitcointalk.org/index.php?topic=5031592.0
+  telegram: https://t.me/SmartEasyInvest

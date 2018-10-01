@@ -8,8 +8,8 @@ meta:
   title: Easy Invest - people`s investment contract!
 
 switch_lang:
-  url: /ru/
-  title: РУС
+  country_code: gb
+  title: English
 
 menu:
   technology: Technology

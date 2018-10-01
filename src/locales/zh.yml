@@ -1,0 +1,220 @@
+﻿meta:
+  description: Easy Invest – 是一个基于Ethereum 智能合同的新一代人民投资基金会。
+    跟着这个基金会，您可以终身每天获得自己投资资金的4%！
+  keywords: 人民智能合同, 333eth, easy invest, 智能合同, 投资, ether, ethereum, 
+    网络挣钱, 消极收益, 投资者, 投资基金会, 收入, 金融 
+    简单的挣钱方式, 如何在网络挣钱, 智能合同, 加密货币, 赏金, 比特币, 钱,
+    pandemica, gorgona, 容易挣的钱, 投资基金会, 庞氏骗局
+  title: Easy Invest – 人民投资智能合同！
+
+switch_lang:
+  country_code: cn
+  title: 简体中
+
+menu:
+  technology: 技术
+  features: 特点
+  instructions: 说明
+  faq: 常见问题
+
+homepage:
+  title: 世界第一个人民投资智能合同
+  mainpoint: 终身获得<big>4%</big>！
+  guarantee: 通过在以Ethereum 加密货币为基础的平台的最明确、最直白和自动化的工作，可以保证投资的安全性
+
+button:
+  make_investment: 投资
+  see_contract: 查看合同
+  show_address: 查看地址
+
+smarts:
+  p1: 智能合同 - 这是一项创新技术，它给了在没有第三方参与下建立人之间信任的机会
+  p2: 智能合同广泛用于金融、医药、能源和火箭领域。
+    这种技术的主要特点是它的开放性和透明性 
+    &mdash; 将智能合同上传至区块链后不能将其更改。
+    因此，在内所描述的规则是严格遵守的。
+  p3: Easy Invest -世界第一个人民投资智能合同。为什么说是人民的?
+    请在<a href="#question">常见问题中阅读</a>.
+
+stats:
+  title: 基金会的当前状态
+  invested_eth: 已投资ETH
+  invested_usd: 已投资USD
+  investors: 投资者
+  investment: '投资：'
+  input_hint: 请输入您投资使用的地址，例如：0x0123456789abcdef...
+    或您想要投资的金额
+  dividends_now: 可提现ETH：
+  dividends_month: 每月ETH收入：
+  dividends_out: 已提现ETH：
+  spent_on_gas: 购买煤气花费ETH:
+
+distribution:
+  title: 资金分配
+  subtitle: 创始人是和您们一样的投资者
+  service: 我们的佣金
+  referal: 推荐计划
+  ads: 广告预算
+  payout: 给投资者支付
+
+instruction:
+  title: 如何投资我们的项目
+  step1:
+    title: 注册并充值ETH钱包
+    p1: Д如果您使用移动设备，我们推荐您使用 
+      <a href="https://trustwalletapp.com/" target="_blank">Trust Wallet</a>。
+    p2: Т另外，您还可以使用一个最流行的钱包之一： 
+      <a href="https://www.myetherwallet.com/" target="_blank">MyEtherWallet</a>。
+      Д如果您使用PC来储存和转账加密货币，请使用：
+      钱包 <a href="https://jaxx.io/downloads.html" target="_blank">Jaxx</a>。
+    p3: 您可以在以下网站上使用卢布或其他货币购买Ethereum加密货币 
+      <a href="https://www.bestchange.com/?p=831118">https://www.bestchange.com</a>。
+
+  step2:
+    title: 投资ETH并每天获得4%
+    subtitle: 请从您的钱包将ETH转账至智能合同的地址：
+    copy: 复制智能合同地址
+    p1: 最低投资金额为0.01 ETH
+    p2: 推荐的gas limit: <b>70000</b>，当前的gas price可以在
+      <a href="https://ethgasstation.info/">https://ethgasstation.info/</a>看到。
+    p3: 我们不支持从交易所的转账，只接受您从您个人钱包的转账
+    p4: 查看所有的 <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0">视频</a>
+
+  step3:
+    title: 查看并跟踪转账状态
+    subtitle: 请在您的操作历史中或在
+      网站上<a href="https://etherscan.io" target="_blank">etherscan.io</a>输入钱包地址
+       并查看转账的状态
+
+  step4:
+    title: 在合适的时间获得支付
+    p1: 智能合同会记住您钱包的地址，以及投资金额和日期
+    p2: 每24小时您将获得您投资金额的4%。
+      支付金额计算公式：
+      （从最近投资过去的分钟 / 24*60）x 投资金额
+    p3: 您可以随时获得支付，只需将0 ETH发送至智能合同地址
+
+faq:
+  title: 常见问题
+  q1:
+    question: <big>如何您可以保证我会获得我的利息？</big></big> 
+    answer: 项目的智能合同已上传至Ethereum区块链。它的工作是完全自动化的。
+      智能合同的创建者不可访问其代码等数据。根本不知道谁是创建者！ 
+      智能合同不能被更改或删除。只有一个普通有可靠的程序可以管理合同上的资金
+      并为投资者支付收入。
+      它可以保证按时的支付。您可以查看：
+      <a href="https://etherscan.io/address/0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f">代码</a>
+      或阅读我们的主题并自己确保这些： 
+      <a href="https://bitcointalk.org/index.php?topic=5031592.0" target="_blank"></a>
+      或查看视频<a href="https://www.youtube.com/watch?v=2PyvdqchXYA">智能合同审计</a>.
+  q2:
+    question: <big><big>为什么我们会终身给您支付4%？</big></big>
+    answer: 智能合同的代码在基金会有资金的情况下能够保证按时支付投资者
+  q3:
+    question: <big><big>为什么要选择我们的项目？</big></big>
+    answer: '<ul>
+                <li><big><b>简单又正直的智能合同</b></big><br/>
+                我们的智能合同有非常简单又正直而可靠的源码。
+                </li>
+                <li><big><b>没有主人</b></big><br/>
+                本合同没有主人，所以连创建者都以普通投资者的身份参与本项目。这是本项目可靠的最大的证据！
+                </li>
+                <li><big><b>所有的钱给投资者</b></big><br/>
+                这是唯一的智能合同，其完全无额外的费用。这代表您会挣到更多的钱！
+                </li>
+                <li><big><b>最大的支付</b></big><br/>
+                多亏于本项目完全无佣金，我们可以为您每天支付4%！    
+                </li>
+                <li><big><b>自动化</b></big><br/>
+                您可以在任何时候自己提现自己的利息，只需做一个空白的转账就行！
+                </li> 
+            </ul>'
+
+  q4:
+    question: <big><big>如果开发者突然停止本项目的支持，会发生什么？</big></big>
+    answer: Э这是一个人民智能合同，这代表开发者不会停止本项目的支持，因为本项目根本没有开发者！ 
+      即便也有开发者，他们不可访问智能合同。 
+      因而合同将在任何情况下继续工作。
+
+  q5:
+    question: <big><big>项目有没有推荐计划？</big></big>
+    answer: '<p>
+                不，因为推荐计划会白费投资者的钱。
+            </p>
+            <p>
+                因为这个智能合同非常好，所以您才可以获得那么好的利息。
+            </p>
+            <p>
+                不用推荐链接来吸引其他投资者参与项目—您会更长时间获得自己的利息！
+            </p>'
+  q6:
+    question: <big><big>为什么智能本合同叫做“人民智能合同”？</big></big>
+    answer: '<p>
+                最开始，这个项目的名字是Easy Invest并且它有过一个开发者。 
+                就像比特币的创建者Satosi Nakamoto。这个开发者创建了一个全新的合同， 
+                在论坛上发布了几个链接然后……消失了！接下来在论坛上本开发者所有的消息都逐渐消失了
+                众所周知，本项目的第一个投资者是开发者本身。
+            <p>
+                接下来合同开始独立地存活。它拥有独立的、简洁的、简单和正直的代码，
+                如比特币一样，它能够吸引人们。 
+                З在很短的时间内，无需广告，使用口碑营销，对本项目的关注大大上升。
+            </p>
+            <p>
+                由于合同中没有任何的管理角色，所以它周围形成了
+                一群喜欢本项目的高质量和正直。在某些项目为背景， 
+                其管理员的权力巨大，投资者受很大的佣金和项目代码有很多错误，Easy Invest
+                显得非常有益。多亏于它的朴实、高质量、正直和可靠性，
+                Easy Invest被称为真正的人民合同。
+                和比特币开发者的项目一样，Easy Invest也能够大大地影响全世界！
+                现在您可以加入我们革命的大项目！
+            </p>
+            <p>
+                我们只能猜测谁是这人民合同的开发者。谁知道，也许这是Satosi Nakamoto
+                回来并创建了一个新奇迹？:)
+            </p>'
+  q7:
+    question: <big><big>谁在开发这个项目？</big></big>
+    answer: '<p>
+                人们。论坛、群组、网站上的所有主题都由普通投资者而创建的。
+            </p>
+            <p>
+                网站的原始模板（是不是您喜欢我们的网站？）是被一个相互竞争的项目提供。那个项目已倒闭了，或许它的管理员发现更好简单地加入人民合同。
+            </p>
+            <p>
+                加入人民合同，您将自动成为群组的成员，并可以和其他成员一起推广本项目。
+            </p>'
+  q8:
+    question: <big><big>为什么项目没有广告预算？项目不会因此而关闭？</big></big>
+    answer: '<p>
+              正是相反：它会迅速发展！问题在于当 
+              所有的资金和权力输入管理员，那么只有一小群人支持并推广项目。当然还可以
+              让一大群推荐与它工作（再一次地，会花费投资者的钱）但是没人会相信他们。
+              所以普通人民会对这样的项目产生疑问并参加其他的项目。
+            </p>
+            <p>
+                在我们的人民合同中，这是完全不同的。所有的成员的权力平等，并被智能合同
+                所联合。其不会将项目成员分成管理员和投资者。最终，所有的成员会感受到对项目的责任
+                并努力推广它。这样的 <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0">高质量的简评</a>连花钱都做不到。
+            </p>
+            <p>
+                不用寻找项目成功的证据。在为广告和推荐花费0%的情况下，我们的项目已经远远超越
+                许多有管理员的复杂项目，其为广告和推荐计划花费投资者30%的资金。
+            </p>
+            <p>
+                所以，加入我们的项目，您将参与一个推广最有效的项目
+                其没有任何的费用。当然，需要知道，您以一个群体的成员，应该帮助他人，
+                并告诉他们世界上有一个极度有利的人民合同项目。您又可以帮助他人，又可以在更长的时间内获得自己的利息。
+            </p>'
+
+  q9: 
+    question: <big><big>为什么在网站上显示已投资XXX，但在合同中显示YYY？</big></big>
+    answer: 因为在网站上显示的投资金额不带
+      额外的费用。在合同中显示投资金额去掉费用的金额。
+      因此，网站上显示的金额和合同中的金额的差是额外已收的费用。
+
+  questions_left: 还有问题？
+  ask_questions: 请把他它们在我们的群中提到：
+
+community:
+  btt: https://bitcointalk.org/index.php?topic=5033255.0
+  telegram: https://t.me/SmartEasyInvestEN

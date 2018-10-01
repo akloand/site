@@ -3,9 +3,13 @@
     <head>
     	<meta HTTP-EQUIV="REFRESH" CONTENT="1;URL=/en/">
     	<script>
-    		var lang = navigator.language || navigator.browserLanguage;
+    		var lang = (window.localStorage && localStorage.getItem('lang')) || navigator.language || navigator.browserLanguage;
     		if(/ru/.test(lang))
     			window.location.href = '/ru/';
+    		else if(/mo|ro/.test(lang))
+    			window.location.href = '/ro/';
+    		else if(/zh/.test(lang))
+    			window.location.href = '/zh/';
     	    else
     	        window.location.href = '/en/';	
     	</script>

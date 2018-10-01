@@ -8,8 +8,8 @@ meta:
   title: Easy Invest - народный инвестиционный контракт!
 
 switch_lang:
-  url: /en/
-  title: ENG
+  country_code: ru
+  title: Русский
 
 menu:
   technology: Технология
