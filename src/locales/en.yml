@@ -79,7 +79,7 @@ instruction:
     p2: 'Recommended gas limit: <b>70000</b>, actual gas price you can see at
       <a href="https://ethgasstation.info/">https://ethgasstation.info/</a>'
     p3: You can not transfer money from exchanges, only from your personal ETH wallet
-    p4: <!--Watch <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0">video</a>-->
+    p4: Watch <a href="https://youtu.be/VjqnU2Ji6Q4">video</a>
   step3:
     title: Check and track your transaction
     subtitle: Check the success of you transaction in your wallet application history 

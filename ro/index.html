@@ -5344,7 +5344,7 @@ pungă <a href="https://jaxx.io/downloads.html" target="_blank">Jaxx</a>
                                                                                     </p>
                                                                                     <p align="center">
                                                                                         <span style="font-size: 22px;">
-                                                                                            <span style="font-family: &quot;Blogger Sans&quot;;">Privire <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0"> video de revizuire</a></span>
+                                                                                            <span style="font-family: &quot;Blogger Sans&quot;;">Privire <a href="https://youtu.be/VjqnU2Ji6Q4"> video de revizuire</a></span>
                                                                                         </span>
                                                                                     </p>
                                                                                     
@@ -6080,7 +6080,7 @@ de un grup de administratori lacomi.
 <p>
 În contractul popular nu este așa. Toate comunitate combinate de capital inițial și justiție contract de inteligent onest,
 care nu împarte oamenii de pe administratorii și investitorilor. Ca rezultat, toată lumea se simte responsabilă pentru contract și
-proiectul este promovat de toată lumea! Astfel <a href="https://www.youtube.com/watch?v=2WzzH7EXyk0"> de revizuiri calitative</a>, ca și oamenii care cred cu adevărat în subiect nu ordonă pentru bani.
+proiectul este promovat de toată lumea! Astfel <a href="https://youtu.be/VjqnU2Ji6Q4"> de revizuiri calitative</a>, ca și oamenii care cred cu adevărat în subiect nu ordonă pentru bani.
 </p>
 <p>
 Pentru probele nu trebuie să meargă departe. Cu costurile de publicitate de 0%, contractul popular a depășit mult timp
@@ -6395,9 +6395,13 @@ Prin urmare, diferența dintre valoarea investițiilor de pe site și valoarea c
             getInfo(window.g_initialInfo).then(function(info){
             	window.investmentInfo = info;
 
-            	document.getElementById("info_sum").innerHTML = Math.round(info.sum/Math.pow(10, 16))/100;
-            	document.getElementById("info_sum_usd").innerHTML = Math.round(info.sum_usd*100)/100;
-            	document.getElementById("info_num").innerHTML = info.num;
+            	if(!Number.prototype.toLocaleString){
+            		Number.prototype.toLocaleString = Number.prototype.toString;
+            	}
+
+            	document.getElementById("info_sum").innerHTML = (Math.round(info.sum/Math.pow(10, 16))/100).toLocaleString();
+            	document.getElementById("info_sum_usd").innerHTML = (Math.round(info.sum_usd*100)/100).toLocaleString();
+            	document.getElementById("info_num").innerHTML = (info.num).toLocaleString();
 
             	drawChart(info);
 
