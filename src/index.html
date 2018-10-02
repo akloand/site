@@ -9,6 +9,7 @@
         <meta property="og:description" content="{{ meta.description | translate | escapeQuotes }}"/>
         <meta property="og:image" content="https://www.primeinvestments.co.za/images/investmentPlanIcon.png"/>
         <title>{{ meta.title | translate }}</title>
+		<!--=include include/counter.html-->
         <link rel="icon" type='image/png' href="https://www.primeinvestments.co.za/images/investmentPlanIcon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="/s/info.js?v=1"></script>
@@ -6318,7 +6319,7 @@
 
         <script>
         	var g_initialInfo =
-//=include base.json
+//=include include/base.json
         </script>
         <script>
             document.getElementById('inputInvestments').value = localStorage.getItem('address') || 5;

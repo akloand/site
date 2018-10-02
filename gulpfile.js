@@ -14,6 +14,11 @@ var options = {
 gulp.task('translate', function() {
   var translations = ['ru', 'en', 'ro', 'zh'];
  
+  gulp.src('./src/router/index.html')
+      .pipe( include()
+      	.on('error', console.log) )
+      .pipe(gulp.dest('./'));
+  
   translations.forEach(function(translation){
   	options.lang = translation;
     gulp.src('src/*.html')
