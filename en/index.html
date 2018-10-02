@@ -102,6 +102,35 @@
             		font-size: 60px;
                 }
 
+                .video-container0 {
+                	width: 630px;
+                	margin: 0 auto 50px;
+                }
+
+                .video-container {
+                	position: relative;
+                	padding-top: 56.25%;
+                	height: 0;
+                	box-sizing: content-box;
+                }
+
+                .video-container iframe {
+                	position: absolute;
+                	top:0;
+					left:0;
+					width:100%;
+					height:100%;
+                }
+
+                .screen-sm .video-container0 {
+                	width: 420px;
+                }
+
+                .screen-xs .video-container0 {
+                	width: 100%;
+                }
+
+
             	#inputInvestments {
 				    border: none;
 				    display: block;
@@ -4738,8 +4767,10 @@ fully autonomous smart contract created on Ethereum cryptocurrency platform</spa
                                 <div class="node node25 widget widget-button">
                                     <div class="wrapper1">
                                         <div class="wrapper2">
-                                        	<div style="width: 420px; height: 240px; margin: 0 auto 50px">
-                                        		<iframe width="420" height="240" src="https://www.youtube.com/embed/VjqnU2Ji6Q4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        	<div class="video-container0">
+                                        	<div class="video-container">
+                                        		<iframe src="https://www.youtube.com/embed/VjqnU2Ji6Q4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        	</div>
                                         	</div>
                                             <div class="macros-button">
                                                 <div class="btn-out center xs-none">
