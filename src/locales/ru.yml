@@ -106,7 +106,7 @@ faq:
       <a href="https://etherscan.io/address/0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f">код</a>
       и убедиться в этом сами или почитать нашу тему на 
       <a href="https://bitcointalk.org/index.php?topic=5031592.0" target="_blank">форуме</a>
-      или посмотреть <a href="https://www.youtube.com/watch?v=2PyvdqchXYA">аудит контракта</a>.
+      или посмотреть <a href="https://www.youtube.com/watch?v=f9H0htA2pyQ">аудит контракта</a>.
   q2:
     question: <big><big>П</big></big>ОЧЕМУ ВЫПЛАТЫ ПОЖИЗНЕННЫЕ?
     answer: Код смарт контракта гарантирует выплаты до тех пор пока в фонде есть средства.
