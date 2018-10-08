@@ -47,8 +47,8 @@ smarts:
 
 stats:
   title: 基金会的当前状态
-  invested_eth: 已投资ETH
-  invested_usd: 已投资USD
+  invested_eth: 资产负债表ETH
+  invested_usd: 资产负债表USD
   investors: 投资者
   investment: '投资：'
   input_hint: 请输入您投资使用的地址，例如：0x0123456789abcdef...
