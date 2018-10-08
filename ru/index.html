@@ -69,6 +69,16 @@
     <body class="area ">
         <div class="area font-text-ralewaymedium font-header-ralewaybold">
             <style>
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
                 #info_sum, #info_sum_usd, #info_num {
                 	white-space: nowrap;
                 	font-family: "Blogger Sans";
@@ -4768,7 +4778,7 @@
                                                     <p style="text-align: center;">
                                                         <span style="font-size: 26px;">Гарантия безопасных вложений обеспечена самым простым и честным, полностью
 автономным умным контрактом, созданным на платформе криптовалюты Ethereum
-<p align=center><b>!!! АКЦИЯ !!!</b></p>
+<p align=center class="blink_me"><big>!!! АКЦИЯ !!!</big></p>
 <div style="width: 300px; margin: auto">
 При единоразовом перечислении более 5 eth возврат на счет 10% от суммы перечисления, акция действительна до <b>23:59 10.10.18</b>
 Зачисление 10% вам на кошелёк осуществится в течении 24 часов после окончания акции!

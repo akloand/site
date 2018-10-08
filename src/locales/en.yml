@@ -22,7 +22,7 @@ homepage:
   mainpoint: <big>4%</big> per day!
   guarantee: Safety of your deposit is guaranteed by the most simple and honest,
     fully autonomous smart contract created on Ethereum cryptocurrency platform
-    <p align=center><b>!!! PROMO !!!</b></p>
+    <p align=center class="blink_me"><big>!!! PROMO !!!</big></p>
     <div style="width: 300px; margin: auto">
     On having invested 5 eth or more in one transaction you get 10% of your deposit back instantly! Promo is in effect till <b>23:59 10/10/18</b>
     You will receive your 10% cashback during 24 hours after the end of promo!
