@@ -47,8 +47,8 @@ smarts:
 
 stats:
   title: Current state of fund
-  invested_eth: ETH BALANCE
-  invested_usd: USD BALANCE
+  invested_eth: ETH INVESTED
+  invested_usd: USD INVESTED
   investors: INVESTORS
   investment: 'DEPOSIT:'
   input_hint: Enter the address you contributed from in form 0x0123456789abcdef...

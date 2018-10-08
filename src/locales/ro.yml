@@ -41,8 +41,8 @@ smarts:
 
 stats:
   title: Fondul de stat actual
-  invested_eth: ETH bilanț
-  invested_usd: USD bilanț
+  invested_eth: ETH INVESTIT
+  invested_usd: USD INVESTIT
   investors: INVESTITORI
   investment: 'CONTRIBUȚIA:'
   input_hint: Introduceți adresa din care ați investit în format 0x0123456789abcdef...

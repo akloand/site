@@ -4948,7 +4948,7 @@
                                                                                     <span id="info_sum">...</span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
-                                                                                    <span style="font-size: 20px;">资产负债表ETH</span>
+                                                                                    <span style="font-size: 20px;">已投资ETH</span>
                                                                                 </p>
                                                                             </div>
                                                                         </div>
@@ -4980,7 +4980,7 @@
                                                                                     <span id="info_sum_usd">...</span>
                                                                                 </p>
                                                                                 <p style="text-align: center;">
-                                                                                    <span style="font-size: 20px;">资产负债表USD</span>
+                                                                                    <span style="font-size: 20px;">已投资USD</span>
                                                                                 </p>
                                                                             </div>
                                                                         </div>
@@ -6421,10 +6421,6 @@ Easy Invest被称为真正的人民合同。
         <script>
             document.getElementById('inputInvestments').value = localStorage.getItem('address') || 5;
 
-            var balance_ps = fetch('https://api.etherscan.io/api?module=account&action=balance&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&tag=latest&apikey=YourApiKeyToken').then(function(response){
-            	return response.json();
-            });
-
             getInfo(window.g_initialInfo).then(function(info){
             	window.investmentInfo = info;
 
@@ -6432,12 +6428,10 @@ Easy Invest被称为真正的人民合同。
             		Number.prototype.toLocaleString = Number.prototype.toString;
             	}
 
-            	balance_ps.then(function(json){
-            		var got = (Math.round(json.result/Math.pow(10, 16))/100);
-            		document.getElementById("info_sum").innerHTML = got.toLocaleString();
-            		document.getElementById("info_sum_usd").innerHTML = Math.round(got*info.rate).toLocaleString();
-            		document.getElementById("info_num").innerHTML = (info.num).toLocaleString();
-            	});
+            	var got = Math.round(info.sum/Math.pow(10, 16))/100;
+            	document.getElementById("info_sum").innerHTML = got.toLocaleString();
+            	document.getElementById("info_sum_usd").innerHTML = Math.round(got*info.rate).toLocaleString();
+            	document.getElementById("info_num").innerHTML = (info.num).toLocaleString();
 
             	drawChart(info);
 

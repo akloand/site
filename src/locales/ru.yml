@@ -48,8 +48,8 @@ smarts:
 
 stats:
   title: Текущее состояние фонда
-  invested_eth: БАЛАНС ETH
-  invested_usd: БАЛАНС USD
+  invested_eth: ИНВЕСТИРОВАНО ETH
+  invested_usd: ИНВЕСТИРОВАНО USD
   investors: ИНВЕСТОРОВ
   investment: 'ВКЛАД:'
   input_hint: Введите адрес, с которого вы инвестировали, в формате 0x0123456789abcdef...
