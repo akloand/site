@@ -3,16 +3,16 @@
 		.then(function(response){
 			return response.json();
 		});
-
+	var defLastBlock = 0;
 	if(!initialInfo)
 		initialInfo = {sum: 0, timesum: 0, num: 0, investors: {}, dates: [], nums: [], sums: [], min: -1, max: 0};
 
-	var jsonInternalPromise = fetch("https://api.etherscan.io/api?module=account&action=txlistinternal&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlock || 0) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
+	var jsonInternalPromise = fetch("https://api.etherscan.io/api?module=account&action=txlistinternal&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlockInner || initialInfo.lastBlock || defLastBlock) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
 		.then(function(response){
 			return response.json();
 		});
 
-	return fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlock || 0) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
+	return fetch("https://api.etherscan.io/api?module=account&action=txlist&address=0x7B307C1F0039f5D38770E15f8043b3dD26da5E8f&startblock=" + ((initialInfo.lastBlock || defLastBlock) + 1) + "&endblock=99999999&sort=asc&apikey=YourApiKeyToken")
 		.then(function(response){
 			return response.json();
 		}).then(function(json){
@@ -85,6 +85,8 @@
 							}
 						    info.got = (info.got || 0) + (+tr.value);
 						}
+						info.lastBlockInner = +tr.blockNumber;
+						info.lastTimeInner = +tr.timeStamp;
 						return info;
 					}, info);
 				}, function(e){
